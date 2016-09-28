@@ -529,12 +529,11 @@ if(qualification_id == '97'){
 var travel_expen_nine_seven=document.getElementById('travel_expen_nine_seven').value;
 //alert(travel_expen_nine_seven+'travel_expen_nine_seven fir');
 var actua_exp_nine_seven=document.getElementById('actua_exp_nine_seven').value;
-///alert(actua_exp_nine_seven+'actua_exp_nine_seven fir');
+//alert(actua_exp_nine_seven+'actua_exp_nine_seven fir');
 var misc_e_nine_seven=document.getElementById('misc_e_nine_seven').value;
 //alert(misc_e_nine_seven+'misc_e_nine_seven fir');
   if(travel_expen_nine_seven != '' && actua_exp_nine_seven != ''  && misc_e_nine_seven != '' && firc != '' && fircmv != ''  && firccs != ''  && fircps != ''){
 if(insu_accident_nine_seven_a != '' && insu_investiagtor_nine_seven_b != ''){
-
 
 
 //alert(insu_accident_nine_seven_a+'insu_accident_nine_seven_a');
@@ -591,7 +590,9 @@ $.ajax({
          sessionStorage.setItem("supervisor_not_verified_array",JSON.stringify(result[18]));
    
 
-
+document.getElementById('travel_expen_nine_seven').value ="";
+document.getElementById('actua_exp_nine_seven').value ="";
+document.getElementById('misc_e_nine_seven').value ="";
 // alert(region+'refresh new regionArray_array');
 $.mobile.loading().hide();
 $.mobile.changePage($('#dashboard'), { transition: "none", changeHash: true, reverse: false });
@@ -732,6 +733,7 @@ var actua_exp_nine_nine=document.getElementById('actua_exp_nine_nine').value;
 var misc_e_nine_nine=document.getElementById('misc_e_nine_nine').value;
 //alert(misc_e_nine_nine+'misc_e_nine_nine outside driver');
 
+
 if(travel_expen_nine_nine != '' && actua_exp_nine_nine != '' && misc_e_nine_nine != '' && outdria != '' && outdrib != '' && outdric != '' && outdrid != '' && outdrie != '' && outdrif != ''){
 //OUTSIDE driver details start
 if(insu_accident_nine_nine_a != '' && insu_investiagtor_nine_nine_b != ''){
@@ -799,7 +801,9 @@ $.ajax({
         sessionStorage.setItem("supervisor_completed_array",JSON.stringify(result[17]));
          sessionStorage.setItem("supervisor_not_verified_array",JSON.stringify(result[18]));
    
-
+document.getElementById('travel_expen_nine_nine').value ="";
+document.getElementById('actua_exp_nine_nine').value ="";
+document.getElementById('misc_e_nine_nine').value ="";
 
 // alert(region+'refresh new regionArray_array');
 $.mobile.loading().hide();
@@ -870,6 +874,8 @@ var actua_exp_102=document.getElementById('actua_exp_102').value;
 var misc_e_102=document.getElementById('misc_e_102').value;
 //alert(misc_e_102+'misc_e_102 claim');
 //claimant details start
+
+
 if(travel_expen_102 != '' && actua_exp_102 != '' && misc_e_102 != '' && claiquesa != '' && claiquesb != '' && claiquesc != '' && claiquesd != '' && claiquese != '' && claiquesf != '' && claiquesg != '' && claiquesh != '' && claiquesi != '' && claiquesj != '' && claiquesk != ''){
 if(insu_accident_one_zero_two_a != '' && insu_investiagtor_one_zero_two_b != ''){
 
@@ -948,7 +954,9 @@ $.ajax({
         sessionStorage.setItem("supervisor_completed_array",JSON.stringify(result[17]));
          sessionStorage.setItem("supervisor_not_verified_array",JSON.stringify(result[18]));
    
-
+document.getElementById('travel_expen_102').value="";
+document.getElementById('actua_exp_102').value="";
+document.getElementById('misc_e_102').value="";
 
 // alert(region+'refresh new regionArray_array');
 $.mobile.loading().hide();
@@ -1001,6 +1009,8 @@ var actua_exp_95=document.getElementById('actua_exp_nine_five').value;
 var misc_e_95=document.getElementById('misc_e_nine_five').value;
 //alert(misc_e_95+'misc_e 95 accident');
 //accident details start
+
+
 if(accquesa != '' && accquesb != '' && accquesc !='' && travel_expen_95 != '' && actua_exp_95 !='' && misc_e_95 !=''){
 if(insu_accident_nine_five_a != '' && insu_inves_nine_five_b != '' && insu_final_nine_five_c !=''){
 
@@ -1069,7 +1079,9 @@ $.ajax({
         sessionStorage.setItem("supervisor_completed_array",JSON.stringify(result[17]));
          sessionStorage.setItem("supervisor_not_verified_array",JSON.stringify(result[18]));
    
-
+document.getElementById('travel_expen_nine_five').value="";
+document.getElementById('actua_exp_nine_five').value="";
+document.getElementById('misc_e_nine_five').value="";
 
 // alert(region+'refresh new regionArray_array');
 $.mobile.loading().hide();
@@ -1229,6 +1241,8 @@ var actua_exp_insu=document.getElementById('actua_exp_insu').value;
 var misc_e_insu=document.getElementById('misc_e_insu').value;
 //alert(misc_e_insu+'misc_e_insu insured');
 
+
+
 	if(travel_expen_insu != '' && actua_exp_insu != '' && misc_e_insu !='' && insuria != '' && insurib != '' && insuric !='' && insurid !='' && insurie !='' && insurif !='') {
 if(insu_final_one_zero_one != '' ){
 
@@ -1278,6 +1292,9 @@ $.ajax({
          sessionStorage.setItem("supervisor_not_verified_array",JSON.stringify(result[18]));
    
 
+document.getElementById('travel_expen_insu').value="";
+document.getElementById('actua_exp_insu').value="";
+document.getElementById('misc_e_insu').value="";
 
 // alert(region+'refresh new regionArray_array');
 $.mobile.loading().hide();
@@ -1296,23 +1313,6 @@ console.log(error);
 alert('Network error has occurred please try again!');
 }
 });
-
-/*$.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
-  options.async = true;
-});
-
-var formData = $("#insuform").serialize();
-alert('drop button value insert 101');
-$.ajax({
-  type: "POST",
-  url: "http://ibeta.fourthforce.in/slim-insu-quest/one_zero_six.php?verification_user_id="+verification_user_id+"&qualification_id="+qualification_id+"&user_id="+user_id+"&state="+state+"&insu_final_one_zero_one="+insu_final_one_zero_one+"&status="+status,
-  data: formData,
-  success: onSuccessad,
-  async: 'true',
-  crossDomain: true,
-  dataType: 'json',
-  error: onErrorad
-});*/
 
 }
 }
