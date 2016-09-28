@@ -1661,7 +1661,7 @@ alert("Network error: Please check your internet connection");
 
 var settings = {
 
-  url: "http://insurance.fourthforce.in/uploadas.php",
+  url: "http://ibeta.fourthforce.in/uploadas.php",
   method: "POST",
   allowedTypes:"jpg,png,gif",
   /*allowedTypes:"jpg,png,gif,doc,pdf,zip",*/
